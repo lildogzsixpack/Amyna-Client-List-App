@@ -26,10 +26,12 @@
 
 <form action="submit.php" method="post">
 <table border="0" align="center">
-<tr><td><strong>Όνομα:</strong></td><td><input type="text" name="name"/></td></tr><br>
+
 <tr><td><strong>Επίθετο:</strong></td><td><input type="text" name="surname"/></td></tr><br>
+<tr><td><strong>Όνομα:</strong></td><td><input type="text" name="name"/></td></tr><br>
 <tr><td><strong>Διεύθυνση:</strong></td><td><input type="text" name="address"/></td></tr>
-<tr><td><strong>Τηλέφωνο:</strong></td><td><input type="text" name="phone"/></td></tr></table><br>
+<tr><td><strong>Τηλέφωνο:</strong></td><td><input type="text" name="phone"/></td></tr><br>
+<tr><td><strong>Κωδικός Αθλητή:</strong></td><td><input type="text" name="code"/></td></tr></table><br>
 
 		
 		<label class="description" for="element_1"><strong>Ημερομηνία Εγγραφής</strong> </label>
@@ -60,10 +62,10 @@
 		</script>
 	<table align="center">	<br>	
 		<p><strong>Συνδρομή</strong></p>
-		<tr><td><input type="radio" name="subscription" value="year" /></td><td>Χρόνος</td></tr>
-		<tr><td><input type="radio" name="subscription" value="six months"/></td><td>Εξαμηνιαία</td></tr>
-		<tr><td><input type="radio" name="subscription" value="three months"/></td><td>Τρίμηνη</td></tr>
-		<tr><td><input type="radio" name="subscription" value="month"/></td><td>Μηνιαία</td></tr>
+		<tr><td><input type="radio" name="subscription" value="Χρόνος" /></td><td>Χρόνος</td></tr>
+		<tr><td><input type="radio" name="subscription" value="Εξαμηνιαία"/></td><td>Εξαμηνιαία</td></tr>
+		<tr><td><input type="radio" name="subscription" value="Τρίμηνη"/></td><td>Τρίμηνη</td></tr>
+		<tr><td><input type="radio" name="subscription" value="Μηνιαία"/></td><td>Μηνιαία</td></tr>
 	</table>
 		<p><strong>Ιατρικό Ιστορικό / Παρατηρήσεις </strong></p>
 		<textarea rows="5" cols="30" name="med"></textarea> <br>

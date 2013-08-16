@@ -21,19 +21,19 @@
 	<div class="list" >
 		<table align="center">
 			<tr>
-				<th>Όνομα</th><th>Επίθετο</th><th>Ιανουάριος</th><th>Φεβρουάριος</th><th>Μάρτιος</th><th>Αρπρίλιος</th>
+				<th>Επίθετο</th><th>Όνομα</th><th>Ιανουάριος</th><th>Φεβρουάριος</th><th>Μάρτιος</th><th>Αρπρίλιος</th>
 				<th>Μάιος</th><th>Ιούνιος</th><th>Ιούλιος</th><th>Αύγουστος</th><th>Σεπτέμβρης</th><th>Οκτώμβρης</th><th>Νοέμβρης</th>
 				<th>Δεκέμβρης</th>
 			</tr>
 			
 			<?php
 			
-			$con=mysqli_connect("localhost","form","********","form");
+			$con=mysqli_connect("localhost","form","*****","form");
 			if (mysqli_connect_errno())
   			{
   				echo "Failed to connect to MySQL: " . mysqli_connect_error();
   			}
-
+  			mysqli_set_charset($con, "utf8");
 			$result = mysqli_query($con,"SELECT * FROM boxers WHERE id='$_GET[id]'");
 	
 			while($row = mysqli_fetch_array($result))
@@ -50,9 +50,9 @@
  				   	if($payments[$i]=="1")
  				   		$payment[$i]="checked"; 
 				}
-
-  				echo "<tr><td>$row[name]</td><td>$row[surname]</td>
-  				<td><input type=\"checkbox\" name=\"january\" class=\"css-checkbox\" value=\"1\" id= $payment[0]/></td>
+				mysqli_set_charset($con, "utf8");
+  				echo "<tr><td>$row[surname]</td><td>$row[name]</td>
+  				<td><input type=\"checkbox\" name=\"january\" class=\"css-checkbox\" value=\"1\" $payment[0]/></td>
   				<td><input type=\"checkbox\" name=\"february\" class=\"css-checkbox\" value=\"1\" $payment[1]/></td>
   				<td><input type=\"checkbox\" name=\"march\" class=\"css-checkbox\" value=\"1\" $payment[2]/></td>
   				<td><input type=\"checkbox\" name=\"april\" class=\"css-checkbox\" value=\"1\" $payment[3]/></td>

@@ -18,7 +18,7 @@
 
 	$payments=bindec($payments);
 
-	$con=mysqli_connect("localhost","form","******","form");
+	$con=mysqli_connect("localhost","form","*****","form");
 
 	if (mysqli_connect_errno())
   	{

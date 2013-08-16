@@ -1,5 +1,5 @@
 <?php
-	$con=mysqli_connect("localhost","form","******","form");
+	$con=mysqli_connect("localhost","form","*****","form");
 	if (mysqli_connect_errno())
   	{
   		echo "Failed to connect to MySQL: " . mysqli_connect_error();
